@@ -7,6 +7,8 @@ const models = require('./models');
 const Produto = models.Produto;
 const Fabricante = models.Fabricante;
 const Cliente = models.Cliente;
+const Testes = models.Testes;
+
 app.use(logging);
 app.use(bodyParser.json());
 
@@ -25,6 +27,7 @@ app.get('/produtos/:id', (req, res) => {
       res.json(err);
     })
 });
+
 
 app.delete('/produtos/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
